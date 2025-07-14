@@ -1,0 +1,139 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Cairo&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Cairo', sans-serif;
+  background-color: #0a0a0a;
+  color: #eee;
+  overflow-x: hidden;
+}
+
+.hero {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#bgCanvas {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  z-index: 1;
+}
+
+.content {
+  position: relative;
+  z-index: 10;
+  text-align: center;
+  padding: 0 20px;
+}
+
+#title {
+  font-size: 4rem;
+  color: #f5c518;
+  text-shadow: 0 0 8px #f5c518;
+  margin-bottom: 15px;
+}
+
+#subtitle {
+  font-size: 1.5rem;
+  margin-bottom: 30px;
+  color: #ccc;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 30px;
+  background: #f5c518;
+  color: #000;
+  font-weight: bold;
+  border-radius: 30px;
+  cursor: pointer;
+  text-decoration: none;
+  box-shadow: 0 0 15px #f5c518;
+  transition: background 0.3s ease;
+}
+
+.btn:hover {
+  background: #fff200;
+}
+
+section {
+  padding: 60px 20px;
+  max-width: 1100px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 25px;
+  color: #f5c518;
+  text-shadow: 0 0 6px #f5c518;
+}
+
+section p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  max-width: 700px;
+  margin: 0 auto;
+  color: #ddd;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
+  gap: 25px;
+  margin-top: 40px;
+}
+
+.gallery-grid img {
+  width: 100%;
+  border-radius: 15px;
+  box-shadow: 0 0 15px rgba(245,197,24,0.7);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.gallery-grid img:hover {
+  transform: scale(1.05) rotate(3deg);
+  box-shadow: 0 0 25px #f5c518;
+}
+
+footer {
+  background: #050505;
+  padding: 20px;
+  text-align: center;
+  color: #777;
+  font-size: 0.9rem;
+}
+
+/* تهيئة عامة للجوال */
+@media (max-width: 768px) {
+  #title {
+    font-size: 2.5rem !important;
+  }
+  #subtitle {
+    font-size: 1rem !important;
+  }
+  .btn {
+    padding: 10px 20px !important;
+    font-size: 0.9rem !important;
+  }
+  .gallery-grid {
+    grid-template-columns: 1fr !important;
+    gap: 15px !important;
+  }
+  section {
+    padding: 40px 15px !important;
+  }
+}
